@@ -1,0 +1,229 @@
+/* Diseño para el body */
+body{
+    background-color: rgb(19, 174, 174);
+    max-width: 12000px;
+    font-family: 'lato';
+    margin: 0 auto;
+}
+
+/* Diseño para el title */
+.Titulo{
+    background-color:black;
+    height: 3rem;
+    width: 99.5%;
+    text-align: center;
+    color: aliceblue;
+    margin-left: 1.5rem;
+    border-radius: 1rem;
+}
+
+/*Estilos globales*/
+/* lo que pusimos aca reinicia los estilos globales */
+*::after, *::before, *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* para el icono de carrito */
+.icon-cart{
+    width: 40px;
+    height: 47px;
+    background-color: azure;
+    margin-right: 1.5rem;
+    border-radius: 1rem;
+    margin-left: 1rem;
+    stroke: black;
+}
+
+.icon-cart:hover{
+    cursor: pointer;
+}
+
+/* Para las imagenes */
+img{
+    max-width: 300px;
+}
+/* estilos para que las imagenes esten en una sola linea*/
+header{
+    margin-top: -1rem;
+    display:flex;
+    justify-content: space-between;
+    padding: 30px 0 40px 0 ;
+}
+
+/* estilos para el carrito */
+.container-icon{
+    position: relative;
+}
+/* 1-. modificamos el total de producto */
+.count-products{
+    position: absolute;
+    top: 55%;
+    right: 0;
+    background-color: black;
+    color: aliceblue;
+    width: 25px;
+    height: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    margin-right: 0.7rem;
+}
+
+#contador-productos{
+    font-size: 12px;
+
+}
+
+/* 2-. para la lista de elementos */
+.container-cart-productos{
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: aliceblue;
+    width: 400px;
+    z-index: 1;
+    box-shadow:  0 10px 20px rgba(0,0,0, 0.20);
+}
+
+.cart-product{
+    display: flex;
+    justify-content: space-between;
+    padding: 30px;
+    border-bottom: 1px solid rgba(0,0,0,0.20);
+    align-items: center;
+}
+
+/* para aregalar el contenido del carrito */
+.info-cart-product{
+    display: flex;
+    justify-content: space-between;
+    flex: 0.8;
+}
+
+/* para el titulo del producto en el carrito*/
+.titulo-producto-carrito{
+    font-size: 20px;
+}
+/* para el precio del producto en el carrito*/
+.precio-producto-carrito{
+    font-weight: 700;
+    font-size: 20px;
+    margin-left: 10px;
+}
+/* para el cantidad del producto en el carrito*/
+.cantidad-producto-carrito{
+    font-weight: 400;
+    font-size: 20px;
+}
+/* para el total de los productos en el carrito*/
+.cart-total{
+    display: flex;
+    justify-content: center;
+    padding: 20px 0;
+    gap: 20px;   
+}
+
+.cart-total h3{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.total-pagar{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+/* ocultar el contenido del carrito */
+.hidden-cart{
+    display: none;
+}
+
+
+/* 3-. modificar el tamaño del icono de borrar */
+.icon-close{
+    width: 25px;
+    height: 25px;
+}
+
+.icon-close:hover{
+    stroke: red;
+    cursor: pointer;
+}
+
+/* cuerpo */
+.container-items{
+    margin: 0.5rem;
+    /* background-color: #97b6e5 ; */
+    display:grid;
+    grid-template-columns: repeat(4, 3fr);
+    border-radius: 30px;
+    margin-top: 1rem;
+}
+
+/* item es el cuadro que contiene el producto */
+.item{
+   border-radius: 20px; 
+   background-color: #97b6e5 ;
+   margin: 0.5rem;
+   border-radius: 30px;
+   width: 18.1rem;
+   margin-left: 3rem;
+}
+.item:hover{
+    /* cada que pasa el cursor sobre un producto resalta */
+    box-shadow: 0 10px 20px rgb(0, 0, 0.20);
+}
+
+/* para las imagenes de los productos */
+.item img{
+    width: 290px;
+    height: 300px;
+    object-fit:fill;
+    border-radius: 20px; 
+    transition: all .7s;
+}
+
+/* esto es para que al momento de pasar el cursor 
+sobre la imagen resalte */
+.item:hover img{
+    transform: scale(1.1);
+}
+
+/* para la informacion del producto */
+.info-product{
+    padding: 15px 30px;
+    line-height: 2;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* para la informacion del precio */
+.price{
+    font-size: 18px;
+    font-weight: 900;
+}
+
+/* modificacion del boton del producto */
+.info-product button{
+    border: none;
+    background: none;
+    background-color: black;
+    color: aliceblue;
+    padding: 15px 10px;
+    cursor: pointer;
+}
+.comprar-boton{
+    margin-left: 5rem;
+    color: rgb(0, 0, 0);
+    background-color: rgb(80, 225, 225);
+}
+.comprar-boton:hover{
+    cursor: pointer;
+}
+.total{
+    margin-left: 3rem;
+}

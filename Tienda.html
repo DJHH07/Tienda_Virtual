@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/TiendaEstilo.css">
+    <title>DanielsTienda</title>
+</head>
+
+<body>
+    <header>
+        <h1 class="Titulo">
+            Mi Tienda
+        </h1>
+        <!-- Esto nos permite obtener icono de la tienda obtenida en https://heroicons.com/ -->
+        <div class="container-icon">
+            <div class="container-cart-icon">
+                <svg class="icon-cart" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                    strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                    <path strokeLinecap="round" strokeLinejoin="round"
+                        d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z" />
+                </svg>
+                <!-- para lo del carrito -->
+                <div class="count-products">
+                    <span id="contador-productos">0</span>
+                </div>
+            </div>
+            <div class="container-cart-productos hidden-cart">
+                <div class="row-product">
+                    <div class="cart-product">
+                        <div class="info-cart-product">
+                            <span class="cantidad-producto-carrito">
+                                1
+                            </span>
+                            <p class="titulo-producto-carrito">
+                                Zapatillas
+                            </p>
+                            <span class="precio-producto-carrito">
+                                $80
+                            </span>
+                        </div>
+                        <svg class="icon-close" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24"
+                            strokeWidth={1.5} stroke="currentColor" className="w-6 h-6">
+                            <path strokeLinecap="round" strokeLinejoin="round"
+                                d="M14.74 9l-.346 9m-4.788 0L9.26 9m9.968-3.21c.342.052.682.107 1.022.166m-1.022-.165L18.16 19.673a2.25 2.25 0 01-2.244 2.077H8.084a2.25 2.25 0 01-2.244-2.077L4.772 5.79m14.456 0a48.108 48.108 0 00-3.478-.397m-12 .562c.34-.059.68-.114 1.022-.165m0 0a48.11 48.11 0 013.478-.397m7.5 0v-.916c0-1.18-.91-2.164-2.09-2.201a51.964 51.964 0 00-3.32 0c-1.18.037-2.09 1.022-2.09 2.201v.916m7.5 0a48.667 48.667 0 00-7.5 0" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="cart-total" id="carrito">
+                    <h3 class="total">
+                        Total
+                    </h3>
+                    <span class="total-pagar">
+                        $200
+                    </span>
+                    <button class="comprar-boton" id="car">Comprar</button>
+                </div>
+            </div>
+    </header>
+    <!-- aca pondremos los productos -->
+    <div class="container-items">
+        <!-- Esto es cada producto -->
+        <div class="item">
+            <figure>
+                <!-- imagen del producto -->
+                <img src="IMG/Camisas.webp" alt="producto">
+            </figure>
+            <!-- informacion del producto -->
+            <div class="info-product">
+                <!-- titulo del producto -->
+                <h2>Camisa de Vestir</h2>
+                <!-- precio del producto  -->
+                <p class="price"> $100 </p>
+                <!-- añade al producto -->
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <!-- Esto es cada producto -->
+        <div class="item">
+            <figure>
+                <!-- imagen del producto -->
+                <img src="IMG/Lentes 2.webp" alt="producto">
+            </figure>
+            <!-- informacion del producto -->
+            <div class="info-product">
+                <!-- titulo del producto -->
+                <h2>Lentes para el sol</h2>
+                <!-- precio del producto  -->
+                <p class="price"> $150 </p>
+                <!-- añade al producto -->
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <!-- Esto es cada producto -->
+        <div class="item">
+            <figure>
+                <!-- imagen del producto -->
+                <img src="IMG/Lentes.webp" alt="producto">
+            </figure>
+            <!-- informacion del producto -->
+            <div class="info-product">
+                <!-- titulo del producto -->
+                <h2>lentes modernos</h2>
+                <!-- precio del producto  -->
+                <p class="price"> $500 </p>
+                <!-- añade al producto -->
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <!-- Esto es cada producto -->
+        <div class="item">
+            <figure>
+                <!-- imagen del producto -->
+                <img src="IMG/Zapatillas.jpg" alt="producto">
+            </figure>
+            <!-- informacion del producto -->
+            <div class="info-product">
+                <!-- titulo del producto -->
+                <h2>Zapatillas para dama</h2>
+                <!-- precio del producto  -->
+                <p class="price"> $900 </p>
+                <!-- añade al producto -->
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <!-- Esto es cada producto -->
+        <div class="item">
+            <figure>
+                <!-- imagen del producto -->
+                <img src="IMG/Tenis Nike.jpg" alt="producto">
+            </figure>
+            <!-- informacion del producto -->
+            <div class="info-product">
+                <!-- titulo del producto -->
+                <h2>Tenis Nike</h2>
+                <!-- precio del producto  -->
+                <p class="price"> $1000 </p>
+                <!-- añade al producto -->
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <!-- Esto es cada producto -->
+        <div class="item">
+            <figure>
+                <!-- imagen del producto -->
+                <img src="IMG/Tenis adidad.jpg" alt="producto">
+            </figure>
+            <!-- informacion del producto -->
+            <div class="info-product">
+                <!-- titulo del producto -->
+                <h2>Tenis adidas dama</h2>
+                <!-- precio del producto  -->
+                <p class="price"> $800 </p>
+                <!-- añade al producto -->
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <!-- Esto es cada producto -->
+        <div class="item">
+            <figure>
+                <!-- imagen del producto -->
+                <img src="IMG/Gorra.webp" alt="producto">
+            </figure>
+            <!-- informacion del producto -->
+            <div class="info-product">
+                <!-- titulo del producto -->
+                <h2>Gorra</h2>
+                <!-- precio del producto  -->
+                <p class="price"> $100 </p>
+                <!-- añade al producto -->
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+        <!-- Esto es cada producto -->
+        <div class="item">
+            <figure>
+                <!-- imagen del producto -->
+                <img src="IMG/Licra.webp" alt="producto">
+            </figure>
+            <!-- informacion del producto -->
+            <div class="info-product">
+                <!-- titulo del producto -->
+                <h2>Licra deportiva</h2>
+                <!-- precio del producto  -->
+                <p class="price"> $500 </p>
+                <!-- añade al producto -->
+                <button class="btn-add-cart">Añadir al carrito</button>
+            </div>
+        </div>
+    </div>
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+    <script src="JS/Tienda.js"></script>
+</body>
+
+</html>
