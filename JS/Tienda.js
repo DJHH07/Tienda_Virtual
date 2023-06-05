@@ -115,7 +115,7 @@ carrito.addEventListener('click', e =>{
         let mensaje = JSON.stringify(allProducts);
 
         //este mensaje confirma si se va a regalizar la compra  
-        if (confirm("Productos a comprar\n\n"+mensaje+"\n\nTotal de la compra: "+precio)) {
+        if (confirm("Productos a comprar\n\n"+mensaje+"\n\nTotal de la compra: "+precio+"\n\n¿Quieres hacer tu compra?")) {
             // Código que se ejecuta si se hace clic en "Aceptar"
             location.reload();
             allProducts = []
